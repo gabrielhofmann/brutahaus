@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 export function HeroMobile() {
   return (
     <section className="w-screen bg-background desktop:hidden overflow-x-hidden">
-      <div className="w-screen h-dvh bg-background flex flex-col justify-between">
+      <div className="w-screen h-screen bg-background flex flex-col justify-between">
         <header className="w-full border-b border-concrete z-20 bg-background">
           <div className="flex items-center justify-between p-4 gap-8">
             <div className="text-3xl flex flex-col items-center">
