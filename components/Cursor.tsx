@@ -1,8 +1,15 @@
 "use client";
 
+import { useIsDesktop } from "@/lib/isDesktop";
 import { useEffect, useRef } from "react";
 
 export function CustomCursor() {
+  const isDesktop = useIsDesktop();
+
+  return isDesktop ? <Cursor /> : null;
+}
+
+function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

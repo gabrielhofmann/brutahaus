@@ -94,7 +94,15 @@ export function HeroMobile() {
           </div>
         </div>
 
-        <p className="mx-auto py-8 w-full text-center text-yellow font-bold text-xl border-b border-concrete">
+        <div className="w-full border-t border-concrete h-[50vw] flex justify-end relative">
+          <div className="bg-blue w-[25vw] h-1/2"></div>
+
+          <div className="bg-yellow w-[25vw] h-full"></div>
+
+          <div className="bg-red w-[40vw] h-[40vw] rounded-full absolute left-[-20vw] top-0 bottom-0 my-auto"></div>
+        </div>
+
+        <p className="mx-auto py-8 w-full text-center text-yellow font-bold text-xl border-y border-concrete">
           TECH STACK
         </p>
 
@@ -116,14 +124,6 @@ export function HeroMobile() {
           <div className="w-3 h-3 bg-red mx-auto"></div>
 
           <p className="text-end">TAILWIND</p>
-        </div>
-
-        <div className="w-full border-t border-concrete h-[50vw] flex justify-end relative">
-          <div className="bg-blue w-[25vw] h-1/2"></div>
-
-          <div className="bg-yellow w-[25vw] h-full"></div>
-
-          <div className="bg-red w-[40vw] h-[40vw] rounded-full absolute left-[-20vw] top-0 bottom-0 my-auto"></div>
         </div>
 
         <div className="w-full bg-concrete h-fit border-y border-background p-8 space-y-4">

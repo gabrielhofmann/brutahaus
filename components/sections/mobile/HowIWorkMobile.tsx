@@ -1,3 +1,35 @@
+const particles = [
+  { x: "8%", y: "18%", size: "w-2 h-2", color: "bg-red" },
+  { x: "18%", y: "62%", size: "w-5 h-5", color: "bg-blue" },
+  { x: "31%", y: "34%", size: "w-3 h-3", color: "bg-yellow" },
+  { x: "44%", y: "72%", size: "w-1.5 h-1.5", color: "bg-background" },
+  { x: "57%", y: "24%", size: "w-7 h-7", color: "bg-red" },
+  { x: "68%", y: "58%", size: "w-4 h-4", color: "bg-yellow" },
+  { x: "78%", y: "36%", size: "w-2.5 h-2.5", color: "bg-blue" },
+  { x: "89%", y: "70%", size: "w-6 h-6", color: "bg-background" },
+  { x: "94%", y: "16%", size: "w-2 h-2", color: "bg-red" },
+  { x: "12%", y: "82%", size: "w-3.5 h-3.5", color: "bg-yellow" },
+  { x: "38%", y: "12%", size: "w-2 h-2", color: "bg-blue" },
+  { x: "52%", y: "80%", size: "w-5 h-5", color: "bg-red" },
+];
+
+export function ParticlesBox() {
+  return (
+    <div className="relative w-full h-[25vh] px-4 pb-4 border-b border-concrete overflow-hidden">
+      {particles.map((particle, index) => (
+        <span
+          key={index}
+          className={`absolute rounded-full ${particle.size} ${particle.color}`}
+          style={{
+            left: particle.x,
+            top: particle.y,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function HowIWorkMobile() {
   return (
     <section className="bg-white w-screen h-auto desktop:hidden">
@@ -91,6 +123,74 @@ export function HowIWorkMobile() {
             I HELP BRANDS AND IDEAS COME TO LIFE THROUGH CODE, DESIGN AND
             MEANINGFUL INTERACTIONS.
           </p>
+        </div>
+
+        <div>
+          <div className="flex items-center p-4 gap-4">
+            <h1 className="text-red text-[20vw] leading-none">[01]</h1>
+            <h1 className="text-background text-[17vw] leading-none">
+              DISCOVER
+            </h1>
+          </div>
+
+          <p className="text-background text-lg tracking-widest uppercase text-justify font-bold p-4 border-t border-concrete">
+            Understanding the <span className="bg-blue">business</span>,
+            identifying <span className="bg-yellow">user needs</span> and
+            uncovering the real <span className="bg-red">problems</span> behind
+            the surface.
+          </p>
+
+          <ParticlesBox />
+        </div>
+
+        <div>
+          <div className="flex items-center p-4 pt-6 gap-4">
+            <h1 className="text-red text-[20vw] leading-none">[02]</h1>
+            <h1 className="text-background text-[17vw] leading-none">
+              STRUCTURE
+            </h1>
+          </div>
+
+          <p className="text-background text-lg tracking-widest uppercase text-justify font-bold p-4 border-t border-concrete">
+            Organizing ideas into clear flows, scalable systems and solid
+            technical foundations.
+          </p>
+
+          <div className="w-full border-b border-concrete grid grid-cols-3 p-4">
+            <div className="aspect-square border border-concrete border-l-2 border-t-2"></div>
+            <div className="aspect-square border border-concrete border-t-2">
+              <div className="w-full h-full bg-yellow rounded-full"></div>
+            </div>
+            <div className="aspect-square border border-concrete border-t-2  border-r-2 bg-blue"></div>
+            <div className="aspect-square border border-concrete border-b-2 border-l-2 bg-background"></div>
+            <div className="aspect-square border border-concrete border-b-2">
+              <div className="w-full h-full bg-red rounded-full"></div>
+            </div>
+            <div className="aspect-square border border-concrete border-b-2 border-r-2"></div>
+          </div>
+        </div>
+
+        <div>
+          <div className="flex items-center p-4 pt-6 gap-4">
+            <h1 className="text-red text-[20vw] leading-none">[03]</h1>
+            <h1 className="text-background text-[17vw] leading-none">DESIGN</h1>
+          </div>
+
+          <p className="text-background text-lg tracking-widest uppercase text-justify font-bold p-4 border-t border-concrete">
+            Crafting interfaces that balance{" "}
+            <span className="bg-yellow">clarity</span>,{" "}
+            <span className="bg-red">emotion</span> and{" "}
+            <span className="bg-blue">usability</span> through intentional
+            decisions.
+          </p>
+
+          <div className="flex items-center justify-center p-4">
+            <div className="w-[50%] aspect-square bg-yellow [clip-path:polygon(50%_0%,0%_100%,100%_100%)] opacity-80 mr-[-25%] rotate-90 bg-blend-difference" />
+
+            <div className="w-[40%] aspect-square bg-red mt-[10%] rounded-full opacity-80 bg-blend-difference"></div>
+
+            <div className="w-[35%] aspect-square bg-blue ml-[-20%] mt-[-20%] bg-blend-difference opacity-80"></div>
+          </div>
         </div>
       </div>
     </section>
