@@ -7,16 +7,14 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { HeroMobile } from "./mobile/HeroMobile";
+import { useIsDesktop } from "@/lib/isDesktop";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function HeroSection() {
-  return (
-    <>
-      <HeroDesktop />
-      <HeroMobile />
-    </>
-  );
+  const isDesktop = useIsDesktop();
+
+  return isDesktop ? <HeroDesktop /> : <HeroMobile />;
 }
 
 function HeroDesktop() {
@@ -61,7 +59,10 @@ function HeroDesktop() {
   }, []);
 
   return (
-    <section ref={rootRef} className="w-screen h-[200dvh] overflow-x-hidden hidden desktop:block">
+    <section
+      ref={rootRef}
+      className="w-screen h-[200dvh] overflow-x-hidden hidden desktop:block"
+    >
       <div ref={contentRef} className="w-screen h-dvh">
         <BaseGrid>
           <div className="col-start-1 col-span-1 row-start-1 row-span-11 bg-background border-r-concrete border-r py-8">

@@ -8,15 +8,14 @@ import { DiscoverCard } from "./HowIBuild/cards/DiscoverCard";
 import { StructureCard } from "./HowIBuild/cards/StructureCard";
 import { DesignCard } from "./HowIBuild/cards/DesignCard";
 import { HowIWorkMobile } from "./mobile/HowIWorkMobile";
+import { useIsDesktop } from "@/lib/isDesktop";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export function HowIWorkSection() {
+  const isDesktop = useIsDesktop();
 
-    return <>
-        <HowIBuildDesktop />
-        <HowIWorkMobile />
-    </>
+  return isDesktop ? <HowIBuildDesktop /> : <HowIWorkMobile />;
 }
 
 function HowIBuildDesktop() {
