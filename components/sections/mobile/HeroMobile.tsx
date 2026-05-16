@@ -8,11 +8,11 @@ export function HeroMobile() {
         <header className="w-full border-b border-concrete z-20 bg-background">
           <div className="flex items-center justify-between p-4 gap-8">
             <div className="text-3xl flex flex-col items-center">
-              <div className="flex gap-4">
+              <div className="flex gap-">
                 <h1>G</h1>
-                <h1>H</h1>
+                <h1>.H.</h1>
+                <h1>M</h1>
               </div>
-              <h1 className="-mt-1">M</h1>
             </div>
 
             <p className="text-sm tracking-widest font-bold text-end">
@@ -75,7 +75,7 @@ export function HeroMobile() {
         </footer>
       </div>
 
-      <div className="w-screen min-h-dvh bg-background flex flex-col">
+      <div className="w-screen bg-background flex flex-col">
         <div className="w-full bg-concrete border-b border-background p-4 text-background tracking-widest font-bold flex items-center justify-center text-lg">
           <BrasiliaClock />
         </div>
@@ -127,7 +127,9 @@ export function HeroMobile() {
         </div>
 
         <div className="w-full bg-concrete h-fit border-y border-background p-8 space-y-4">
-          <p className="text-background font-bold text-xl tracking-widest">STATUS</p>
+          <p className="text-background font-bold text-xl tracking-widest">
+            STATUS
+          </p>
 
           <div className="w-10 h-[2px] bg-red"></div>
 
@@ -169,7 +171,9 @@ export function HeroMobile() {
         </div>
 
         <div className="w-full bg-red h-fit border-y border-background p-8 space-y-4 flex flex-col">
-          <p className="text-white font-bold text-xl tracking-widest">LATEST WORK</p>
+          <p className="text-white font-bold text-xl tracking-widest">
+            LATEST WORK
+          </p>
 
           <div className="w-10 h-[2px] bg-background"></div>
 
