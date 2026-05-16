@@ -12,9 +12,9 @@
 
   --gray: #7e7e7e;
 
-  --red: #FF3B30;
-  --blue: #245CFF;
-  --yellow: #FFD028;
+  --red: #ff3b30;
+  --blue: #245cff;
+  --yellow: #ffd028;
 }
 
 @theme inline {

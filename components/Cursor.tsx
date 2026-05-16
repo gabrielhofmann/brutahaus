@@ -9,8 +9,11 @@ export function CustomCursor() {
     const cursor = cursorRef.current;
     if (!cursor) return;
 
-    const handleMouseMove = (event: MouseEvent) => {
-      cursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0) translate(-50%, -50%)`;
+    const handlePointerMove = (event: PointerEvent) => {
+      cursor.style.transform = `
+      translate3d(${event.clientX}px, ${event.clientY}px, 0)
+      translate(-50%, -50%)
+    `;
     };
 
     const handleMouseDown = () => {
@@ -23,14 +26,14 @@ export function CustomCursor() {
       cursor.style.height = "42px";
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mousedown", handleMouseDown);
-    window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerdown", handleMouseDown);
+    window.addEventListener("pointerup", handleMouseUp);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mousedown", handleMouseDown);
-      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerdown", handleMouseDown);
+      window.removeEventListener("pointerup", handleMouseUp);
     };
   }, []);
 
